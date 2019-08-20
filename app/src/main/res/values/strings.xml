@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FirstAidKid</string>
+    <string name="fak">Аптечка</string>
+    <string name="button2">Кнопочка</string>
+</resources>
