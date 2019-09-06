@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">FirstAidKid</string>
     <string name="fak">Аптечка</string>
-    <string name="button2">Кнопочка</string>
+    <string name="button2">Добавить препарат</string>
+    <string name="add_prepar">Добавить препарат:</string>
+    <string name="aptechka">БД лекарств</string>
+    <string name="saveNewDrug">Сохранить</string>
+    <string name="nameDrug">Введите наименование:</string>
+    <string name="add_new_drug">add new drug…</string>
+    <string name="typeDescDrug">Введите описание препарата:</string>
+    <string name="describe_new_drug">describe new drug…</string>
 </resources>

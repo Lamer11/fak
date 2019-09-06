@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "697611926263",
+    "firebase_url": "https://firstaidkid-1d11a.firebaseio.com",
+    "project_id": "firstaidkid-1d11a",
+    "storage_bucket": "firstaidkid-1d11a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697611926263:android:b976b60080d2a607",
+        "android_client_info": {
+          "package_name": "se.android.firstaidkid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "697611926263-ogo5b5b3buvqv9l8if9561hp01ifcc17.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "se.android.firstaidkid",
+            "certificate_hash": "5f4aaa099890c3c66a8fa49c1bc521399aae16e8"
+          }
+        },
+        {
+          "client_id": "697611926263-vr00hsof7m87qieraap032piqb1427sn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRCDhOpDpdZQVkgEZFNqMuGPXBUgsd2Ac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "697611926263-vr00hsof7m87qieraap032piqb1427sn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
