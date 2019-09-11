@@ -9,15 +9,17 @@
         android:layout_height="wrap_content"
         android:text="TextView" />
 
-    <ListView
-        android:id="@+id/countriesList"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layout_height="wrap_content" />
+
+
     <Button
+        android:id="@+id/button_11"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Обновить"
-        android:layout_weight="5"
-        android:onClick="updateData"/>
+        android:layout_height="50dp"
+        android:onClick="updateData"
+        android:text="Butonchik"/>
+
 </LinearLayout>

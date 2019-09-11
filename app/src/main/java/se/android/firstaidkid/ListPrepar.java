@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,7 +29,8 @@ public class ListPrepar extends AppCompatActivity {
     private TextView selection;
     ListView countriesList;
     String[] countries = { "Бразилия", "Аргентина"};
-    List<String> listDrugs = new ArrayList<>();
+    ArrayList<String> listDrugs = new ArrayList<>();
+    RecyclerView mMessageRecycler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +59,9 @@ public class ListPrepar extends AppCompatActivity {
         // получаем элемент TextView
         selection = (TextView) findViewById(R.id.selection);
         // получаем элемент ListView
-        countriesList = (ListView) findViewById(R.id.countriesList);
+        mMessageRecycler = (RecyclerView) findViewById(R.id.recycle); // finding all parametres
+
+
 
 
 
@@ -64,6 +69,7 @@ public class ListPrepar extends AppCompatActivity {
 
     public void updateData(View view){
 
+        /*
         // создаем адаптер
         ArrayAdapter<String> adapter = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, listDrugs);
@@ -81,7 +87,25 @@ public class ListPrepar extends AppCompatActivity {
             }
         });
 
+
+         */
+
+
+        mMessageRecycler.setLayoutManager(new LinearLayoutManager(this));
+
+        final DataAdapter dataAdapter = new DataAdapter(this, listDrugs);
+
+        mMessageRecycler.setAdapter(dataAdapter);
+
+
+
     }
 
+
+    public void testOnClick(View view){
+        ViewHolder vv = new ViewHolder(view);
+
+        selection.setText(vv.message.getText());
+    }
 
 }
