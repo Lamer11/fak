@@ -33,4 +33,8 @@ public class InfoByDrug extends AppCompatActivity {
         // the logic for editing drugs
 
     }
+
+
+
+
 }
