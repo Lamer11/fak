@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="se.android.firstaidkid">
+    package="se.android.firstaidkid"
+    android:versionCode="1"
+    android:versionName="l.0">
 
     <application
         android:allowBackup="true"
@@ -9,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Matrix"></activity>
         <activity android:name=".InfoByDrug" />
         <activity android:name=".addDrugActivity" />
         <activity android:name=".ListPrepar" />
