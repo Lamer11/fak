@@ -42,8 +42,4 @@ public class MainActivity extends AppCompatActivity {
         //добавление вибрации и (по идее) стандартного звука
         view.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
     }
-
-
-
-
 }

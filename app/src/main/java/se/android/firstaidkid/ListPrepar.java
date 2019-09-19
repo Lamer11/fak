@@ -71,8 +71,7 @@ public class ListPrepar extends AppCompatActivity {
                     spinner.setVisibility(View.GONE); // тут делаем прогрессбар невидимым, так как тут БД уже подгружайсон
 
                     // создаем адаптер (прям в этом во всем асинхронном. Асинхронное это все для получения данных из базы данных)
-                    ArrayAdapter<String> adapter = new ArrayAdapter(getApplicationContext(),
-                            android.R.layout.simple_list_item_1, arrayDrug);
+                    ArrayAdapter<String> adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, arrayDrug);
                     // устанавливаем для списка адаптер
                     countriesList.setAdapter(adapter);
                     // добавляем для списка слушатель
