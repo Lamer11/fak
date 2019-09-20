@@ -28,7 +28,6 @@ import java.util.Map;
 public class ListPrepar extends AppCompatActivity {
 
     FirebaseFirestore firebase = FirebaseFirestore.getInstance();
-    private TextView selection;
     ListView countriesList;
     List<Map<String, Object>> listMapDrugs = new ArrayList<>(); //карта, в которой будет хранится вся аптека из коллекции
     List<String> arrayDrug = new ArrayList<>(); // создаем массив с названиями лекарст, для ArrayAdapter (для аргумента внутри, разбираться не охота)
@@ -36,22 +35,17 @@ public class ListPrepar extends AppCompatActivity {
     //делаем объект прогресс бара в виде круглешка, который будет отрабатывать пока не подгрузится инфа из БД
     private ProgressBar spinner;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_prepar);
 
-        // получаем элемент TextView
-        selection = (TextView) findViewById(R.id.selection);
         // получаем элемент ListView
         countriesList = (ListView) findViewById(R.id.countriesList);
 
-
         spinner = (ProgressBar)findViewById(R.id.progressBar1); // инициализируем наш прогрессбар
         spinner.setVisibility(View.VISIBLE); // делаем видимым
-
 
         // создаем и инициализируем базу данных Firebase внутри метода onCreate()
         firebase.collection("apteka").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -84,8 +78,6 @@ public class ListPrepar extends AppCompatActivity {
                             String selectedItem = (String) listMapDrugs.get(position).get("drug");
                             //создаем временный мап для передачи в интент
                             Map<String, Object> intentMapa = listMapDrugs.get(position);
-                            // установка текста элемента TextView
-                            selection.setText(selectedItem);
 
                             // создание объекта Intent для запуска InfoByDrug
                             Intent intent = new Intent(getApplicationContext(), InfoByDrug.class);
@@ -93,9 +85,6 @@ public class ListPrepar extends AppCompatActivity {
                             intent.putExtra("key", (Serializable) intentMapa);
                             //System.out.println("Интент = " + selectedItem);
                             startActivity(intent);
-
-
-
 
                         }
                     });
@@ -112,7 +101,5 @@ public class ListPrepar extends AppCompatActivity {
 
 
     }
-
-
 
 }

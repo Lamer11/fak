@@ -77,7 +77,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#78ecac"
         android:orientation="horizontal"
